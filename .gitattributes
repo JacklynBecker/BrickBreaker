@@ -1,1 +1,4 @@
+BrickBreaker/Library/PackageCache/com.unity.burst/.Runtime/libburst-llvm-16.dylib filter=lfs diff=lfs merge=lfs -text
+[[:space:]]BrickBreaker/Library/PackageCache/com.unity.burst/.Runtime/burst-llvm-16-arm64.dll filter=lfs diff=lfs merge=lfs -text
+BrickBreaker/Library/PackageCache/com.unity.burst/.Runtime/burst-llvm-16-arm64.dll filter=lfs diff=lfs merge=lfs -text
 BrickBreaker/Library/PackageCache/com.unity.burst/.Runtime/* filter=lfs diff=lfs merge=lfs -text
