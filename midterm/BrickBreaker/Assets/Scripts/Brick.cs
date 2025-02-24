@@ -3,14 +3,9 @@ using UnityEngine;
 public class Brick : MonoBehaviour
 {
     private const string BallTag="ball";
-    private SpriteRenderer brick;
 
     public int health=3;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void Awake()
-    {
-        //brick = GetComponent<SpriteRenderer>();
-    }
+
 
     void OnCollisionEnter2D(Collision2D other)
     {

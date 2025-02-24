@@ -6,7 +6,6 @@ public class BallMovement : MonoBehaviour
     //Const Strings
     private const string PlayerTag="player";
     private const string WallTag="wall";
-    private const string BrickTag="brick";
     private const string GoalTag="goal";
 
      //Private variables

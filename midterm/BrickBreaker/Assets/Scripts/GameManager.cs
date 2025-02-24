@@ -73,7 +73,6 @@ public class GameManager : MonoBehaviour
     public void addScoreBrick()
     {
         BricksHit++;
-        Debug.Log($"Block Gone!");
         if(BricksHit >= winScore)
         {
             //Display lose message

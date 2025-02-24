@@ -9,6 +9,7 @@ TagManager:
   - wall
   - brick
   - ball
+  - boost
   layers:
   - Default
   - TransparentFX

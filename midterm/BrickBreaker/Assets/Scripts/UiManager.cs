@@ -19,9 +19,4 @@ public class UiManager : MonoBehaviour
         }
     }
 
-    public void BrickColourChange(Collision2D brick)
-    {
-        //SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-        //renderer.color = new Color.yellow;
-    }
 }
