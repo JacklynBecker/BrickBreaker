@@ -4,34 +4,42 @@ public class Brick : MonoBehaviour
 {
     private const string BallTag="ball";
     private SpriteRenderer brick;
+
+    public int health=3;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
-        brick = GetComponent<SpriteRenderer>();
+        //brick = GetComponent<SpriteRenderer>();
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.CompareTag(BallTag))
         {
-            if(brick.material.color == Color.white){
-                HandlePlayerCollision(other);
-                brick.material.color= Color.blue;
-            }
-            else if(brick.material.color==Color.blue){
-                HandlePlayerCollision(other);
-                brick.material.color=Color.green;
-            }
-            else if(brick.material.color==Color.green){
+            if(health == 1){
                 HandlePlayerCollision(other);
                 Destroy(gameObject);
                 GameManager.Instance.addScoreBrick();
+            }
+            else{
+                health--;
+                HandlePlayerCollision(other);
+                updateBrickColour();
             }
         }
         else{
             return;
         }
         
+    }
+
+    private void updateBrickColour(){
+        if (health == 2){
+            GetComponent<SpriteRenderer>().color=Color.green;
+        }
+        else if (health == 1){
+            GetComponent<SpriteRenderer>().color=Color.white;
+        }
     }
 
     private void HandlePlayerCollision(Collision2D other)

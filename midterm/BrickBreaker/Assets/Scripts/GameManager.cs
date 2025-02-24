@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     //lose Score Condition 
     public int loseScore = 3;
 
-    public int winScore=4;
+    public int winScore=8;
 
     //unity function
     private void Awake()
@@ -45,9 +45,9 @@ public class GameManager : MonoBehaviour
         ballRigidBody.transform.position = new  Vector2(0f,-4f);
         //randomly choose direction for ball to move horizontally
         //generate random number 0 or 1. if 0 return -1 if not 0 return 1
-        float randX = Random.Range(0,2) == 0? -1 : 1;
+        float randX = -1f;
         //add slight vertical variation
-        float randY = Random.Range(-0.5f,0.5f);
+        float randY = 1f;
 
         //set the balls velocity
         Vector2 direction = new Vector2(randX,randY).normalized;
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
     public void addScore()
     {
         groundHit++;
-        if(groundHit >= winScore)
+        if(groundHit >= loseScore)
         {
             //Display lose message
             Debug.Log($"You Lose!");
@@ -73,7 +73,8 @@ public class GameManager : MonoBehaviour
     public void addScoreBrick()
     {
         BricksHit++;
-        if(BricksHit >= loseScore)
+        Debug.Log($"Block Gone!");
+        if(BricksHit >= winScore)
         {
             //Display lose message
             Debug.Log($"You Win!");
