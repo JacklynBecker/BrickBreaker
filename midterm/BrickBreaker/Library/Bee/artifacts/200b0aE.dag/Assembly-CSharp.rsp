@@ -460,7 +460,6 @@
 "Assets/Scripts/MainMenuController.cs"
 "Assets/Scripts/PaddleMovement.cs"
 "Assets/Scripts/PowerUp.cs"
-"Assets/Scripts/UiManager.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 /deterministic
