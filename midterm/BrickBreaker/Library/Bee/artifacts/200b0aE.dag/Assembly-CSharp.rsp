@@ -457,6 +457,7 @@
 "Assets/Scripts/BallMovement.cs"
 "Assets/Scripts/Brick.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/MainMenuController.cs"
 "Assets/Scripts/PaddleMovement.cs"
 "Assets/Scripts/PowerUp.cs"
 "Assets/Scripts/UiManager.cs"
