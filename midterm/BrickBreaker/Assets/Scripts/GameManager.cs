@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     //ground hit variables
     private int groundHit=0;
+    private int BricksHit=0;
 
     //Ball variables
     public Rigidbody2D ballRigidBody;
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     //lose Score Condition 
     public int loseScore = 3;
+
+    public int winScore=4;
 
     //unity function
     private void Awake()
@@ -58,14 +61,24 @@ public class GameManager : MonoBehaviour
     public void addScore()
     {
         groundHit++;
-        if(groundHit >= loseScore)
+        if(groundHit >= winScore)
         {
             //Display lose message
             Debug.Log($"You Lose!");
             StopGame();
         }
-
         resetBall();
+    }
+
+    public void addScoreBrick()
+    {
+        BricksHit++;
+        if(BricksHit >= loseScore)
+        {
+            //Display lose message
+            Debug.Log($"You Win!");
+            StopGame();
+        }
     }
 
     public Vector2 GetCurrentVelocity()

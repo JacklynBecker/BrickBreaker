@@ -1,1 +1,1 @@
-/Users/jackybecker/MDEV1003/MDEV1003-W2025/midterm/BrickBreaker
+/Users/jackybecker/MDEV1003/BrickBreaker/midterm/BrickBreaker

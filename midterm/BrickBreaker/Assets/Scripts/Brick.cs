@@ -25,6 +25,7 @@ public class Brick : MonoBehaviour
             else if(brick.material.color==Color.green){
                 HandlePlayerCollision(other);
                 Destroy(gameObject);
+                GameManager.Instance.addScoreBrick();
             }
         }
         else{
